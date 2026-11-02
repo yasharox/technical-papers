@@ -23,8 +23,30 @@ Below are the main steps in an event-driven workflow:
 
 ## Example: Online Shopping Order
 
-**First event:** Order placed
-**Second event:** Payment received
-**Third event:** Order shipped
+**First event:** Order placed.
+**Second event:** Payment received.
+**Third event:** Order shipped.
 
 If someone check for the current status, the system looks at these events in order and gives the update. If an item is canceled, the system adds a cancellation event instead of erasing the past events.
+
+## Advantages
+
+1. Keeps a complete history of all changes.
+2. Makes it easy to audit and track data.
+3. Allows the system to replay events to fix bugs or build new views.
+
+## Challenges
+
+The event list can become very long and slow to read over time. And fixing errors requires adding new correction events instead of editing old ones. It adds extra complexity compared to normal databases.
+
+## Conclusion
+
+Event Sourcing is a useful way to track data history by saving events in order. While it adds some complexity, it is great for systems that need clear audits and reliable change tracking.
+
+## References
+
+**Microsoft Learn:** Event Sourcing pattern (https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)
+
+**AWS Prescriptive Guidance:** Event Sourcing pattern (https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/event-sourcing-pattern.html)
+
+**Martin Fowler:** Event Sourcing (https://www.martinfowler.com/eaaDev/EventSourcing.html)
