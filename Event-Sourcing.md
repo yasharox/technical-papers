@@ -18,8 +18,7 @@ Below are the main steps in an event-driven workflow:
 
 **Command Handler:** Receives commands, validates them, and performs actions.\
 **Event:** Keeps a record of completed events.\
-**Event Store:** A database that only adds new events and never changes old ones.
-
+**Event Store:** A database that only adds new events and never changes old ones.\
 **Projection:** A view of data created by processing events for fast reading.
 
 ## Example: Online Shopping Order
