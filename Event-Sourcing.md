@@ -16,16 +16,21 @@ Below are the main steps in an event-driven workflow:
 
 ## Main Components
 
-**Command Handler:** Receives commands, validates them, and performs actions.
-**Event:** Keeps a record of completed events.
-**Event Store:** A database that only adds new events and never changes old ones.
+**Command Handler:** Receives commands, validates them, and performs actions.\
+
+**Event:** Keeps a record of completed events.\
+
+**Event Store:** A database that only adds new events and never changes old ones.\
+
 **Projection:** A view of data created by processing events for fast reading.
 
 ## Example: Online Shopping Order
 
 **First event:** Order placed.\
+
 **Second event:** Payment received.\
-**Third event:** Order shipped.\
+
+**Third event:** Order shipped.
 
 If someone check for the current status, the system looks at these events in order and gives the update. If an item is canceled, the system adds a cancellation event instead of erasing the past events.
 
