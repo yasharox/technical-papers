@@ -1,1 +1,0 @@
-# technical-papers
