@@ -23,9 +23,9 @@ Below are the main steps in an event-driven workflow:
 
 ## Example: Online Shopping Order
 
-**First event:** Order placed.
-**Second event:** Payment received.
-**Third event:** Order shipped.
+**First event:** Order placed.\
+**Second event:** Payment received.\
+**Third event:** Order shipped.\
 
 If someone check for the current status, the system looks at these events in order and gives the update. If an item is canceled, the system adds a cancellation event instead of erasing the past events.
 
